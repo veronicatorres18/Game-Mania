@@ -16,10 +16,20 @@
     height: 05px; /* Ajuste a altura conforme necessário */
     margin: 0 30px; /* Espaçamento horizontal */
 }
-
+.container, .menu, .banner, .categorias {
+    width: 100%;
+    max-width: 100%;
+}
 .menu-icon {
     font-size: 24px; /* Ajuste o tamanho do ícone */
     margin-right: 15px; /* Espaçamento à direita */
+}
+* {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
 }
 
 .search-form {
@@ -76,6 +86,9 @@ nav ul {
     height: 70px; /* Ajuste a altura dos ícones */
     margin-left: 100px; /* Espaçamento à esquerda */
     
+}
+body {
+    overflow-x: hidden;
 }
 
 
@@ -196,10 +209,17 @@ h2 {
     border-radius: 10px; /* Arredondar bordas */
     overflow: hidden; /* Garante que a imagem e o card fiquem bem ajustados */
 }
-
+.produto-img {
+    height: 200px; /* ajuste a altura conforme necessário */
+    object-fit: contain; /* garante que a imagem se ajuste sem distorção */
+    padding: 10px;
+}
 .card-img-top {
     height: 400px; /* Altura fixa para garantir que todas as imagens tenham o mesmo tamanho */
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    max-width: 450px; /* ajusta a largura máxima do card */
+    margin: auto; /* centraliza o card */
+    
 }
 
 .card-body {
@@ -219,28 +239,6 @@ h2 {
     font-size: 1.5em; /* Aumenta o tamanho do preço */
 }
 
-.destaque-item, .galeria-item {
-    background: #e9ecef;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    text-align: center;
-}
-
-/* Estilo da galeria */
-#galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#galeria img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-    flex: 1 0 30%; /* Ajusta o tamanho das imagens */
-}
 
 /* Estilo do footer */
 footer {
@@ -256,7 +254,13 @@ footer {
 footer p {
     margin: 5px 0;
 }
-
+.marcasrecomendadas img {
+    width: 300px; /* Tamanho da imagem */
+    height: 300px;
+    border-radius: 0%; /* torna quadrado */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 /* Estilo responsivo */
 @media (max-width: 600px) {
     nav ul li {
@@ -269,3 +273,4 @@ footer p {
         align-items: center;
     }
 }
+
